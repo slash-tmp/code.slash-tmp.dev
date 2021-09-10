@@ -15,6 +15,7 @@ const htmlContent = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="${slug}" />
     <meta property="og:description" content="${slug}" />
+    <link rel="icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./index.js"></script>
