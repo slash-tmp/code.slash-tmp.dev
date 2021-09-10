@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 1rem;
+  margin: 0;
+  max-width: 40rem;
+}
+
+*:focus {
+  outline: 2px solid;
+}
+
+code {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.2rem;
+}
+
+time {
+  font-weight: bold;
+}

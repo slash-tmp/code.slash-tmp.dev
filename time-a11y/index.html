@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Accessibilité de la balise &lt;time&gt;</title>
+  </head>
+  <body>
+    <h1>Accessibilité de la balise <code>&lt;time&gt;</code></h1>
+
+    <p>
+      Cette page teste l'accesssibilité de la balise
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"
+        ><code>&lt;time&gt;</code></a
+      >
+      et de son attribut <code>datetime</code> sur plusieurs combinaisons de
+      navigateurs et de lecteurs d'écran. Les résultats sont disponibles sur
+      l'article dédié :
+      <a href="https://slash-tmp.dev/blog/accessibilite-balise-time">[TBD]</a>.
+    </p>
+
+    <h2>Avec l'attribute <code>datetime</code></h2>
+
+    <ol>
+      <li>
+        Date en toutes lettres :
+        <time datetime="2021-09-08">8 septembre 2021</time>.
+      </li>
+      <li>Date abrégée : <time datetime="2021-09-08">08/09/2021</time>.</li>
+      <li>Durée : <time datetime="PT2H36M">2 heures et 36 minutes</time>.</li>
+    </ol>
+
+    <h2>Sans l'attribute <code>datetime</code></h2>
+
+    <ol>
+      <li>
+        Date en toutes lettres :
+        <time>8 septembre 2021</time>.
+      </li>
+      <li>Date abrégée : <time>08/09/2021</time>.</li>
+      <li>Durée : <time>2 heures et 36 minutes</time>.</li>
+    </ol>
+  </body>
+</html>
