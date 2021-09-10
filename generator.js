@@ -13,11 +13,19 @@ const htmlContent = `<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="${slug}" />
+    <meta property="og:description" content="${slug}" />
+    <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./index.js"></script>
     <title>${slug}</title>
   </head>
   <body>
+    <!--
+      To do:
+        - Update meta tags.
+        - Remove <link> or <script> tags in needed.
+    -->
     <h1>${slug}</h1>
   </body>
 </html>
@@ -25,33 +33,37 @@ const htmlContent = `<!DOCTYPE html>
 
 // Create folder `./${slug}`
 try {
-  if (!fs.existsSync(slug)) {
-    fs.mkdirSync(slug)
+  if (!fs.existsSync(`web/${slug}`)) {
+    fs.mkdirSync(`web/${slug}`)
+    console.log(`Successfully created \`web/${slug}\` folder`)
   }
 } catch (err) {
   console.error(err)
 }
 
 // Create index.html
-fs.writeFile(`./${slug}/index.html`, htmlContent, (err) => {
+fs.writeFile(`./web/${slug}/index.html`, htmlContent, (err) => {
   if (err) {
     console.error('Error while creating "index.html": ', err)
     return
   }
+  console.log('Successfully created `index.html` file')
 })
 
 // Create styles.css
-fs.writeFile(`./${slug}/styles.css`, '', (err) => {
+fs.writeFile(`./web/${slug}/styles.css`, '', (err) => {
   if (err) {
     console.error('Error while creating "styles.css": ', err)
     return
   }
+  console.log('Successfully created `styles.css` file')
 })
 
 // Create index.js
-fs.writeFile(`./${slug}/index.js`, '', (err) => {
+fs.writeFile(`./web/${slug}/index.js`, '', (err) => {
   if (err) {
     console.error('Error while creating "index.js": ', err)
     return
   }
+  console.log('Successfully created `index.js` file')
 })
